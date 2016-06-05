@@ -9,7 +9,7 @@ To run
 
  scala TranscriberDemo
 
- pocketsphinx_continuous -infile ~/workspace-e4.4/dmk-scala-conversationalui/tmp.wav -lm corpus-test.1/1675.lm -dict corpus-test.1/1675.dic
+ pocketsphinx_continuous -infile ~/workspace/dmk-scala-conversationalui/tmp.wav -lm corpus-test.1/1675.lm -dict corpus-test.1/1675.dic
 
 Tools
 ---

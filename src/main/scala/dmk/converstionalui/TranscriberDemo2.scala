@@ -1,17 +1,12 @@
 package dmk.converstionalui
 
-import java.io.File
-import java.io.FileInputStream
-import java.io.InputStream
-
 import edu.cmu.sphinx.api.Configuration
-import edu.cmu.sphinx.api.SpeechResult
-import edu.cmu.sphinx.api.StreamSpeechRecognizer
+import edu.cmu.sphinx.api.LiveSpeechRecognizer
 
 /**
  * Taken and modified from http://cmusphinx.sourceforge.net/wiki/tutorialsphinx4
  */
-class TranscriberDemo {
+class TranscriberDemo2 {
 
   def init(): Unit = {
 
@@ -23,12 +18,9 @@ class TranscriberDemo {
     configuration
       .setLanguageModelPath("resource:/edu/cmu/sphinx/models/en-us/en-us.lm.bin")
 
-    val recognizer = new StreamSpeechRecognizer(
-      configuration)
-    val stream = new FileInputStream(new File("tmp.wav"))
+    val recognizer = new LiveSpeechRecognizer(configuration)
 
-    recognizer.startRecognition(stream)
-
+    recognizer.startRecognition(true)
     var result = recognizer.getResult()
     while (result != null) {
       System.out.format("Hypothesis: %s\n", result.getHypothesis())
@@ -40,10 +32,10 @@ class TranscriberDemo {
 
 }
 
-object TranscriberDemo {
+object TranscriberDemo2 {
 
   def main(args: Array[String]): Unit = {
-    new TranscriberDemo().init
+    new TranscriberDemo2().init
   }
 
 }
