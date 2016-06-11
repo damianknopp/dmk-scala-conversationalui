@@ -21,5 +21,4 @@ http://cmusphinx.sourceforge.net/wiki/tutorialsphinx4
 
 http://espeak.sourceforge.net/
 
-  ./speak -v en --path ./ "a brief history of time"
-
+  ./speak -v en-us+f2 --path ./ "a brief history of time" -b 1

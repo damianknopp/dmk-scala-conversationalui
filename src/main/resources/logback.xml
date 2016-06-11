@@ -7,7 +7,7 @@
     </layout>
   </appender>
    
-  <logger name="dmk.ethj" level="trace"/>
+  <logger name="dmk" level="trace"/>
  
   <root level="warn">
     <appender-ref ref="STDOUT" />

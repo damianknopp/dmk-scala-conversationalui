@@ -1,4 +1,4 @@
-package dmk.converstionalui
+package dmk.converstionalui.cmusphinx
 
 import edu.cmu.sphinx.api.Configuration
 import edu.cmu.sphinx.api.LiveSpeechRecognizer

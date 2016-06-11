@@ -3,4 +3,5 @@
 .project
 .cache
 .classpath
-
+Raw*
+**/**/raw*
